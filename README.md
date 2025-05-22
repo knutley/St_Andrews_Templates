@@ -1,2 +1,2 @@
 # St_Andrews_Thesis_Template
-This is a GitHub repo for a School of International Relations docotoral thesis at the University of St Andrews. 
+This is a GitHub repo for Overleaf templates that are specific to the School of International Relations at the University of St Andrews. At the moment, I have only included a thesis template and the requisite images, but will expand it to eventually include Beamer presentations, etc. 
