@@ -1,0 +1,162 @@
+% Thesis Template for STA IR PGRs. 
+% Check for the current version here: xxxxx
+% Note, this the modified work from the published QMUL SMS PGR thesis template. All credit due to Zain Ahmed Kapadia. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% General Page set up
+\documentclass[a4paper, twoside]{report} % Report is like article, but in addition to sections and subsections, you have chapters and parts. For more details, see https://en.wikibooks.org/wiki/LaTeX/Document_Structure 
+\usepackage[a4paper, margin=40mm]{geometry} % A4 paper size, margins no less than 40mm.
+\usepackage[doublespacing]{setspace} % Double or one-and-a-half spacing. Choose as you like.
+%\usepackage[onehalfspacing]{setspace}
+% Note that single spacing may be used for indented quotations or footnotes, see the Thesis Presentation Notes for more details.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Insert Packages as you like
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath, physics, amsfonts}
+\usepackage{hyperref} % Hyperlinks
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Theorem Environments
+\usepackage{amsthm}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% New Commands and Math Operators
+% See https://tex.stackexchange.com/questions/67506/newcommand-vs-declaremathoperator for the distinction between \newcommand and \DeclareMathOperator.
+\newcommand{\C}{\mathbb{C}}
+\DeclareMathOperator{\arctg}{arctg}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Bibliography
+\usepackage{biblatex} % Imports biblatex package
+\addbibresource{references.bib} % Import the bibliography file
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Title Page 
+\begin{titlepage} 
+	\begin{center}
+	{\LARGE Your Thesis Title \par} 
+	\vspace{2cm}
+	{\Large Your Name  \\ 
+    Your Supervisor \par}
+	
+    \vfill
+	{\Large School of International Relations \par}
+    \vspace{1cm}
+    {\includegraphics[width=0.35\linewidth]{01-foundation-vertical-black-text.png} \par}
+	\vspace{1cm}
+    {\large Month Year \par}
+    \vspace{1cm}
+    {Submitted in partial fulfillment of the requirements \\ of the Degree of Doctor of Philosophy \par}
+    \vspace{1cm}
+    \thispagestyle{plain} % Puts a page number on the title page
+    \end{center}
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Statement of Originality
+\newpage \setcounter{page}{2} % Readjusts the page numbering
+\section*{Statement of Originality}
+\addcontentsline{toc}{chapter}{\protect\numberline{}Statement of Originality} % This adds the Statement of Originality to the table of contents as an unnumbered chapter
+
+    I, [Your Name], confirm that the research included within this thesis proposal is my own work and where it has been carried out in collaboration with, or supported by others, that this is duly acknowledged below and my contribution indicated. Previously published material is also acknowledged below. \\ \\
+    \noindent I attest that I have exercised reasonable care to ensure that the work is original and does not, to the best of my knowledge, break any UK law, infringe any third party’s copyright or other Intellectual Property Right, or contain any confidential material. \\ \\    
+    \noindent  I accept that the University of St Andrews has the right to use plagiarism detection software to check the electronic version of the thesis. \\ \\    
+    \noindent I confirm that this thesis has not been previously submitted for the award of a degree by this or any other university. \\ \\
+    \noindent The copyright of this thesis rests with the author and no quotation from it or information derived from it may be published without the prior written consent of the author. \\ \\
+    \noindent Signature: [typed name or your electronic signature] \\ \\    
+    \noindent Date: Month Day, Year\\ \\    
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Abstract
+\newpage
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{\protect\numberline{}Abstract} % This adds the abstract to the table of contents as an unnumbered chapter
+Insert abstract here. No more than 300 words.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Acknowledgements
+\newpage
+\chapter*{Acknowledgements}
+\addcontentsline{toc}{chapter}{\protect\numberline{}Acknowledgements} % This adds the acknowledgements to the table of contents as an unnumbered chapter
+Cheers.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Table of contents; list of tables; list of figures
+\newpage
+\tableofcontents
+\listoftables
+\listoffigures
+% Sample text / real work goes here.
+\newpage
+\chapter{Sample Text}
+
+This is a sample text. Here's a useful definition:
+\begin{definition}[A cool person]
+    A cool person is a person who uses this thesis template.
+\end{definition}
+
+We can now state and prove the following theorem:
+\begin{theorem}[True Theorem]
+    Cool people get PhDs.
+\end{theorem}
+\begin{proof}
+    I have discovered a truly marvellous proof of this, which this margin is too narrow to contain.
+\end{proof}
+
+We can use the self-defined commands $\C$ and $\arctg(\pi)$ as above.
+
+You can make a table, and it'll appear in the list of tables above, after the table of contents.
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{c|c}
+        A & B  \\
+        C & D
+    \end{tabular}
+    \caption{First Table}
+    \label{tab:first_table}
+\end{table}
+
+Note that the tabular environment on its own is not enough, you need the table environment for it to show up.
+
+\newpage
+
+You can also make figures, which will appear in the list of figures above, after the list of tables.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{01-foundation-vertical-black-text.png}
+    \caption{First Figure}
+    \label{fig:first_figure}
+\end{figure}
+
+You can also cite a book \cite{Nutley2025} or an article \cite{Nutley2020} or whatever you like, which will show in the bibliography at the end. 
+
+% Small note, some of our faculty seem to prefer in-text citations so clarify with your supervisor first. :) 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Bibliography
+\newpage
+\printbibliography[title={Bibliography}]
+\addcontentsline{toc}{chapter}{\protect\numberline{}Bibliography} % This adds the bibliography to the table of contents as an unnumbered chapter
+
+
+\end{document}
