@@ -17,3 +17,5 @@ When it comes to the bibliography, you will need to make a references tab; entit
     publisher = {Oxford University Press},
     year    = {2025}
 }
+
+Please note; this was heavily based on a pre-existing template - QMUL SMS PGR thesis template - and all credit is due to Zain Ahmed Kapadia. This is not my own work, it is simply a useful modification. 
